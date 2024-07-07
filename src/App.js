@@ -35,24 +35,27 @@ function App() {
     <div className="App">
       <div className="header-container">
         <header className="header">
-          <Link to="/" className="title">Site-name</Link>
+          <Link to="/" className="title">LearnAlgo</Link>
           <nav className="nav">
             <div className="nav-item" ref={menuRefA}>
-              <a onClick={() => setOpenA(!openA)}>A</a>
+              <a onClick={() => setOpenA(!openA)}>Data Structure Visualizer</a>
               <div className={`dropdown-menu ${openA ? 'active' : 'inactive'}`}>
                 <ul>
-                  <DropdownItem text="Apple" link="/apple" />
+                  <DropdownItem text="Vector" link="/apple" />
                   <DropdownItem text="Apricot" link="/apricot" />
                 </ul>
               </div>
             </div>
             <div className="nav-item" ref={menuRefB}>
-              <a onClick={() => setOpenB(!openB)}>B</a>
+              <a onClick={() => setOpenB(!openB)}>Sorting Algorithms</a>
               <div className={`dropdown-menu ${openB ? 'active' : 'inactive'}`}>
-                <ul>
-                  <DropdownItem text="Ball" link="/ball" />
-                  <DropdownItem text="Banana" link="/banana" />
-                </ul>
+                <center>
+                  <ul>
+                    <DropdownItem text="Ball" link="/ball" />
+                    <DropdownItem text="Banana" link="/banana" />
+                  </ul>
+                </center>
+                
               </div>
             </div>
           </nav>
