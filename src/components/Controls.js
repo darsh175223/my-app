@@ -4,19 +4,19 @@ const Controls = ({ addElement, deleteElement }) => {
   const [inputValue, setInputValue] = useState('');
 
   const handleAdd = () => {
-    addElement(inputValue);
+    addElement(parseInt(inputValue, 10));
     setInputValue('');
   };
 
   const handleDelete = () => {
-    deleteElement(inputValue);
+    deleteElement(parseInt(inputValue, 10));
     setInputValue('');
   };
 
   return (
     <div>
       <input
-        type="text"
+        type="number"
         value={inputValue}
         onChange={(e) => setInputValue(e.target.value)}
       />
