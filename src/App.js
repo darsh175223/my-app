@@ -6,6 +6,8 @@ import Apple from './pages/Apple';
 import Apricot from './pages/Apricot';
 import Ball from './pages/Ball';
 import Banana from './pages/Banana';
+import Hashtable from './pages/Hashtable';
+import Hashmap from './pages/Hashmap';
 
 function App() {
   const [openA, setOpenA] = useState(false);
@@ -42,7 +44,10 @@ function App() {
               <div className={`dropdown-menu ${openA ? 'active' : 'inactive'}`}>
                 <ul>
                   <DropdownItem text="Vector" link="/apple" />
-                  <DropdownItem text="Apricot" link="/apricot" />
+                  <DropdownItem text="Binary Tree" link="/apricot" />
+                  <DropdownItem text="Hashtable" link="/Hashtable" />
+                  <DropdownItem text="Hashmap" link="/Hashmap" />
+
                 </ul>
               </div>
             </div>
@@ -69,6 +74,9 @@ function App() {
         <Route path="/apricot" element={<Apricot />} />
         <Route path="/ball" element={<Ball />} />
         <Route path="/banana" element={<Banana />} />
+        <Route path="/Hashtable" element={<Hashtable />} />
+        <Route path="/Hashmap" element={<Hashmap />} />
+
       </Routes>
     </div>
   );
