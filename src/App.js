@@ -43,7 +43,7 @@ function App() {
               <a onClick={() => setOpenA(!openA)}>Data Structure Visualizer</a>
               <div className={`dropdown-menu ${openA ? 'active' : 'inactive'}`}>
                 <ul>
-                  <DropdownItem text="Vector" link="/apple" />
+                  <DropdownItem text="Linked List" link="/apple" />
                   <DropdownItem text="Binary Tree" link="/apricot" />
                   <DropdownItem text="Hashtable" link="/Hashtable" />
                   <DropdownItem text="Hashmap" link="/Hashmap" />
