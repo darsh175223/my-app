@@ -1,5 +1,5 @@
 import React from 'react';
-import SelectionSortVisualizer from '../components/SelectionSortVisualizer';
+import BubbleSortVisualizer from '../components/BubbleSortVisualizer';
 
 
 const Ball = () => {
@@ -7,7 +7,7 @@ const Ball = () => {
 
 <div style={{ backgroundColor: '#d4eafc', minHeight: '100vh', padding: '20px' }}> 
         
-        <SelectionSortVisualizer/>
+        <BubbleSortVisualizer/>
     </div>
 
 

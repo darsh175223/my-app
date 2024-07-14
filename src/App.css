@@ -43,7 +43,7 @@
     background-color: #efe7ef;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 4px;
-    overflow: hidden;
+    /* overflow: hidden; */
     transition: max-height 0.3s ease;
     max-height: 0;
     visibility: hidden;
@@ -52,7 +52,7 @@
   
   .dropdown-menu.active {
     text-align: center;
-    max-height: 200px; /* Adjust as needed */
+    max-height: 500px; /* Adjust as needed */
     visibility: visible;
   }
   

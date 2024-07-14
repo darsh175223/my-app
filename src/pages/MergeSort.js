@@ -1,13 +1,13 @@
 import React from 'react';
-import SelectionSortVisualizer from '../components/SelectionSortVisualizer';
+import MergeSortVisualizer from '../components/MergeSortVisualizer';
 
 
-const Ball = () => {
+const MergeSort = () => {
   return (
 
 <div style={{ backgroundColor: '#d4eafc', minHeight: '100vh', padding: '20px' }}> 
         
-        <SelectionSortVisualizer/>
+        <MergeSortVisualizer/>
     </div>
 
 
@@ -16,4 +16,4 @@ const Ball = () => {
   );
 }
 
-export default Ball;
+export default MergeSort;

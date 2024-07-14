@@ -8,6 +8,10 @@ import Ball from './pages/Ball';
 import Banana from './pages/Banana';
 import Hashtable from './pages/Hashtable';
 import Hashmap from './pages/Hashmap';
+import MergeSort from './pages/MergeSort';
+import BubbleSort from './pages/BubbleSort';
+import RadixSort from './pages/RadixSort';
+
 
 function App() {
   const [openA, setOpenA] = useState(false);
@@ -56,8 +60,12 @@ function App() {
               <div className={`dropdown-menu ${openB ? 'active' : 'inactive'}`}>
                 <center>
                   <ul>
-                    <DropdownItem text="Ball" link="/ball" />
-                    <DropdownItem text="Banana" link="/banana" />
+                    <DropdownItem text="Selection Sort" link="/ball" />
+                    <DropdownItem text="Quick Sort" link="/banana" />
+                    <DropdownItem text="Merge Sort" link="/MergeSort" />
+                    <DropdownItem text="Bubble Sort" link="/BubbleSort" />
+                    <DropdownItem text="Radix Sort" link="/RadixSort" />
+
                   </ul>
                 </center>
                 
@@ -76,6 +84,9 @@ function App() {
         <Route path="/banana" element={<Banana />} />
         <Route path="/Hashtable" element={<Hashtable />} />
         <Route path="/Hashmap" element={<Hashmap />} />
+        <Route path="/MergeSort" element={<MergeSort />} />
+        <Route path="/BubbleSort" element={<BubbleSort />} />
+        <Route path="/RadixSort" element={<RadixSort />} />
 
       </Routes>
     </div>
