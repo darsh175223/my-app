@@ -2,31 +2,29 @@
     import LinkedList from '../dataStructures/LinkedList';
 
     const HashmapArrow = ({ arrowSrc, coordinates }) => {
-    console.log('coordinates: ', coordinates);
-    coordinates.map((coordinate, index) => console.log(coordinate.x));
+        console.log('coordinates: ', coordinates);
+        coordinates.map((coordinate, index) => console.log(coordinate.x));
 
 
-    return (
-        <div style={{ position: 'relative' }}>
-        {coordinates.map((coordinate, index) => (
-            <img
-            key={index} // Use index as a key for each image
-            src={arrowSrc}
-            alt="hashmap connection arrow"
-            style={{
-                position: 'absolute',
-                top: coordinate.y + 'px', // Adjust based on your coordinate format
-                left: coordinate.x + 'px', // Adjust based on your coordinate format
-                width: '30px', // Optional: Set image width
-                height: '45px', // Optional: Set image height
-            }}
-            />
-        ))}
+        return (
+            <div style={{ position: 'relative' }}>
+            {coordinates.map((coordinate, index) => (
+                <img
+                key={index} // Use index as a key for each image
+                src={arrowSrc}
+                alt="hashmap connection arrow"
+                style={{
+                    position: 'absolute',
+                    top: coordinate.y + 'px', // Adjust based on your coordinate format
+                    left: coordinate.x + 'px', // Adjust based on your coordinate format
+                    width: '30px', // Optional: Set image width
+                    height: '45px', // Optional: Set image height
+                }}
+                />
+            ))}                      
 
-                       
-
-        </div>
-    );
+            </div>
+        );
     };
 
 
@@ -85,8 +83,7 @@
     const [inputValue, setInputValue] = useState('');
     const [inputSize, setSizeValue] = useState('');
     const [columns, setColumns] = useState(10);
-    const [hashmap, setHashMap] = useState(Array(10).fill(null));
-    const [showArrow, setShowArrow] = useState(false);
+   
     const [connectionCoordinates, setConnectionCoordinates] = useState([]);
     const [inputNums, setInputNums] = useState([])
 
