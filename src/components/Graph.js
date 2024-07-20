@@ -60,7 +60,7 @@ const Graph = () => {
       {
         label: 'Data Points',
         data: dataPoints,
-        backgroundColor: 'rgba(75,192,192,1)',
+        backgroundColor: '#black',
         pointRadius: 5
       }
     ]

@@ -12,15 +12,22 @@ import MergeSort from './pages/MergeSort';
 import BubbleSort from './pages/BubbleSort';
 import RadixSort from './pages/RadixSort';
 import LinearRegression from './pages/LinearRegressionPage';
+import NeuralNetworkPage from './pages/NeuralNetworkPage';
+import DigitPage from './pages/DigitPage';
+
 
 function App() {
   const [openA, setOpenA] = useState(false);
   const [openB, setOpenB] = useState(false);
   const [openML, setOpenML] = useState(false);
+  const [openGames, setOpenGames] = useState(false);
+
 
   const menuRefA = useRef();
   const menuRefB = useRef();
   const menuRefML = useRef();
+  const menuRefGames = useRef();
+
 
   useEffect(() => {
     const handler = (e) => {
@@ -32,6 +39,9 @@ function App() {
       }
       if (menuRefML.current && !menuRefML.current.contains(e.target)) {
         setOpenML(false);
+      }
+      if (menuRefGames.current && !menuRefGames.current.contains(e.target)) {
+        setOpenGames(false);
       }
     };
 
@@ -59,6 +69,7 @@ function App() {
                 </ul>
               </div>
             </div>
+
             <div className="nav-item" ref={menuRefB}>
               <a onClick={() => setOpenB(!openB)}>Sorting Algorithms</a>
               <div className={`dropdown-menu ${openB ? 'active' : 'inactive'}`}>
@@ -71,14 +82,29 @@ function App() {
                 </ul>
               </div>
             </div>
+
             <div className="nav-item" ref={menuRefML}>
               <a onClick={() => setOpenML(!openML)}>Machine Learning Visualizer</a>
               <div className={`dropdown-menu ${openML ? 'active' : 'inactive'}`}>
                 <ul>
                   <DropdownItem text="Linear Regression" link="/LinearRegression" />
+                  <DropdownItem text="Neural Network" link="/NeuralNetworkPage" />
+
                 </ul>
               </div>
             </div>
+
+            <div className="nav-item" ref={menuRefGames}>
+              <a onClick={() => setOpenGames(!openGames)}>Games</a>
+              <div className={`dropdown-menu ${openGames ? 'active' : 'inactive'}`}>
+                <ul>
+                  <DropdownItem text="Digits game" link="/DigitPage" />
+
+                </ul>
+              </div>
+            </div>
+
+
           </nav>
         </header>
       </div>
@@ -94,6 +120,9 @@ function App() {
         <Route path="/BubbleSort" element={<BubbleSort />} />
         <Route path="/RadixSort" element={<RadixSort />} />
         <Route path="/LinearRegression" element={<LinearRegression />} />
+        <Route path="/NeuralNetworkPage" element={<NeuralNetworkPage />} />
+        <Route path="/DigitPage" element={<DigitPage />} />
+
       </Routes>
     </div>
   );
