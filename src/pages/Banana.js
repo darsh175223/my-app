@@ -1,9 +1,11 @@
 import React from 'react';
+import QuickSortVisualizer from '../components/QuickSortVisualizer';
+
 
 const Banana = () => {
   return (
     <div style={{ backgroundColor: '#d4eafc', minHeight: '100vh', padding: '20px' }}>
-      <h1>Banana</h1>
+      <QuickSortVisualizer/>
     </div>
   );
 }
