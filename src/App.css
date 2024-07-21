@@ -19,16 +19,19 @@
   .nav {
     display: flex;
     gap: 40px; /* Increase the gap between nav items for more space */
+    padding-right: 20px; /*added right padding */
   }     
   
   .nav-item {
     font-size: 20px;
 
     position: relative;
+    
     cursor: pointer;
     text-align: center;
 
   }
+
   
   .nav-item a {
     text-align: center;
