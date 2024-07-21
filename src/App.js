@@ -14,6 +14,8 @@ import RadixSort from './pages/RadixSort';
 import LinearRegression from './pages/LinearRegressionPage';
 import NeuralNetworkPage from './pages/NeuralNetworkPage';
 import DigitPage from './pages/DigitPage';
+import LogisticRegression from './pages/LogisticRegressionPage';
+
 
 
 function App() {
@@ -88,6 +90,7 @@ function App() {
               <div className={`dropdown-menu ${openML ? 'active' : 'inactive'}`}>
                 <ul>
                   <DropdownItem text="Linear Regression" link="/LinearRegression" />
+                  <DropdownItem text="Polynomial Regression" link="/LogisticRegression" />
                   <DropdownItem text="Neural Network" link="/NeuralNetworkPage" />
 
                 </ul>
@@ -122,6 +125,7 @@ function App() {
         <Route path="/LinearRegression" element={<LinearRegression />} />
         <Route path="/NeuralNetworkPage" element={<NeuralNetworkPage />} />
         <Route path="/DigitPage" element={<DigitPage />} />
+        <Route path="/LogisticRegression" element={<LogisticRegression />} />
 
       </Routes>
     </div>
