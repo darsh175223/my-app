@@ -19,7 +19,7 @@
   .nav {
     display: flex;
     gap: 40px; /* Increase the gap between nav items for more space */
-    padding-right: 20px;
+    padding-right: 20px; /*added right padding*/
   }     
   
   .nav-item {
