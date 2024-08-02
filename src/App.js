@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Routes, Route, Link } from 'react-router-dom';
+import { Routes, Route, Link, useNavigate } from 'react-router-dom';
 import './App.css';
 import Home from './pages/Home';
 import Apple from './pages/Apple';
@@ -15,6 +15,10 @@ import LinearRegression from './pages/LinearRegressionPage';
 import NeuralNetworkPage from './pages/NeuralNetworkPage';
 import DigitPage from './pages/DigitPage';
 import LogisticRegression from './pages/LogisticRegressionPage';
+import Login from './pages/loginPage';
+import Register from './components/Register';
+import Pong from './pages/PongAI';
+
 
 
 
@@ -29,6 +33,12 @@ function App() {
   const menuRefB = useRef();
   const menuRefML = useRef();
   const menuRefGames = useRef();
+
+  const navigate = useNavigate();
+
+  const handleLoginClick = () => {
+    navigate('/Login');
+  };
 
 
   useEffect(() => {
@@ -58,7 +68,7 @@ function App() {
     <div className="App">
       <div className="header-container">
         <header className="header">
-          <Link to="/" className="title">visualize|DSA|</Link>
+          <Link to="/" className="title">AlgoFluent</Link>
           <nav className="nav">
             <div className="nav-item" ref={menuRefA}>
               <a onClick={() => setOpenA(!openA)}>Data Structure Visualizer</a>
@@ -102,10 +112,24 @@ function App() {
               <div className={`dropdown-menu ${openGames ? 'active' : 'inactive'}`}>
                 <ul>
                   <DropdownItem text="Digits game" link="/DigitPage" />
+                  <DropdownItem text="Pong" link="/Pong" />
+
 
                 </ul>
               </div>
             </div>
+
+            <button onClick={handleLoginClick}
+            style={{
+              backgroundColor: '#ebbf50',
+              borderColor: 'white',
+              color: 'black',
+              fontSize: '15px',
+              padding: '10px 10px',
+              borderRadius: '40px',
+              cursor: 'pointer'
+            }}
+            >Login</button>
 
 
           </nav>
@@ -126,6 +150,10 @@ function App() {
         <Route path="/NeuralNetworkPage" element={<NeuralNetworkPage />} />
         <Route path="/DigitPage" element={<DigitPage />} />
         <Route path="/LogisticRegression" element={<LogisticRegression />} />
+        <Route path="/Login" element={<Login />} />
+        <Route path="/Register" element={<Register />} />
+        <Route path="/Pong" element={<Pong />} />
+
 
       </Routes>
     </div>
