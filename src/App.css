@@ -3,7 +3,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 40px 20px;
-    background-color: #634F62;
+    background-color: #2d283e;
     border-bottom: 1px solid #DFD3E3;
   }
   
@@ -13,7 +13,7 @@
     text-decoration: none;
     font-family:fantasy;
     letter-spacing: 10px;
-    color: white;
+    color: #802bb1;
   }
   
   .nav {
@@ -36,7 +36,7 @@
   .nav-item a {
     text-align: center;
     text-decoration: none;
-    color: #DFD3E3;
+    color: #d1d7e0;
 
   }
   

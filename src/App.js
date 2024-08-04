@@ -18,6 +18,18 @@ import LogisticRegression from './pages/LogisticRegressionPage';
 import Login from './pages/loginPage';
 import Register from './components/Register';
 import Pong from './pages/PongAI';
+import UserDashboard from './pages/userDashboard';
+import PythonTutorial from './pages/PythonTutorial';
+import JavaScriptTutorial from './pages/JavaScriptTutorial';
+import HTMLTutorial from './pages/HTML_Tutorial';
+import CSSTutorial from './pages/CSSTutorial';
+import CTutorial from './pages/C_Tutorial';
+import CsharpTutorial from './pages/CsharpTutorial';
+import Cplusplus_Tutorial from './pages/Cplusplus_Tutorial';
+import JavaTutorial from './pages/JavaTutorial';
+import DockerTutorial from './pages/DockerTutorial';
+
+
 
 
 
@@ -76,8 +88,8 @@ function App() {
                 <ul>
                   <DropdownItem text="Linked List" link="/apple" />
                   <DropdownItem text="Binary Tree" link="/apricot" />
-                  <DropdownItem text="Hashtable" link="/Hashtable" />
-                  <DropdownItem text="Hashmap" link="/Hashmap" />
+                  <DropdownItem text="Closed Hashing" link="/Hashtable" />
+                  <DropdownItem text="Open Hashing" link="/Hashmap" />
                 </ul>
               </div>
             </div>
@@ -121,9 +133,9 @@ function App() {
 
             <button onClick={handleLoginClick}
             style={{
-              backgroundColor: '#ebbf50',
+              backgroundColor: '#2d5f5d',
               borderColor: 'white',
-              color: 'black',
+              color: 'white',
               fontSize: '15px',
               padding: '10px 10px',
               borderRadius: '40px',
@@ -153,6 +165,17 @@ function App() {
         <Route path="/Login" element={<Login />} />
         <Route path="/Register" element={<Register />} />
         <Route path="/Pong" element={<Pong />} />
+        <Route path="/UserDashboard" element={<UserDashboard />} />
+        <Route path="/PythonTutorial" element={<PythonTutorial />} />
+        <Route path="/JavaScriptTutorial" element={<JavaScriptTutorial />} />
+        <Route path="/HTMLTutorial" element={<HTMLTutorial />} />
+        <Route path="/CSSTutorial" element={<CSSTutorial />} />
+        <Route path="/CTutorial" element={<CTutorial />} />
+        <Route path="/CsharpTutorial" element={<CsharpTutorial />} />
+        <Route path="/Cplusplus_Tutorial" element={<Cplusplus_Tutorial />} />
+        <Route path="/JavaTutorial" element={<JavaTutorial />} />
+        <Route path="/DockerTutorial" element={<DockerTutorial />} />
+
 
 
       </Routes>

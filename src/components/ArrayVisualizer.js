@@ -31,6 +31,8 @@ const ArrayVisualizer = () => {
         setHighlightedIndex(currentIndex);
         currentIndex++;
       } else {
+
+        
         setHighlightedIndex(currentIndex);
         setArray(array.filter((el) => el !== element));
         clearInterval(interval);
@@ -42,7 +44,7 @@ const ArrayVisualizer = () => {
 
   return (
     <div className="visualizer-container" style={{ marginBottom: 20 }}>
-              <h2>Linked List Visualizer</h2>
+              <h2>Linked-List Visualizer</h2>
         <div style={{ marginBottom: 75 }}>
         <Controls addElement={addElement} deleteElement={deleteElement} />
         </div>
